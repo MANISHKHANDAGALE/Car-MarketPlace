@@ -12,9 +12,9 @@ import Data from '@/Shared/Data';
 function Search() {
   return (
     <>
-    <div className='p-2 px-5 md:p-5 bg-white rounded-md    md:rounded-full flex-col md:flex md:flex-row items-center gap-10 w-[60%]'>
+    <div className='p-2 px-5 md:p-5 bg-white rounded-md   md:rounded-full flex-col md:flex md:flex-row items-center gap-10 w-[60%]'>
    <Select>
-  <SelectTrigger  className="text-lg  outline-none md:border-none w-full shadow-none  ">
+  <SelectTrigger  className="text-lg  outline-none md:border-none w-full shadow-none cursor-pointer  ">
     <SelectValue  placeholder="Car" />
   </SelectTrigger>
   <SelectContent>
@@ -25,8 +25,8 @@ function Search() {
 </Select>
 <Separator orientation="vertical" className="hidden md:block" />
    <Select>
-  <SelectTrigger  className="text-lg text-black outline-none md:border-none w-full shadow-none  ">
-    <SelectValue placeholder="Car Brand" />
+  <SelectTrigger  className="text-lg text-black outline-none md:border-none w-full shadow-none cursor-pointer  ">
+    <SelectValue  placeholder="Car Brand" />
   </SelectTrigger>
   <SelectContent>
     {Data.CarMakes.map((maker,index)=>(
@@ -37,13 +37,13 @@ function Search() {
 </Select>
 <Separator orientation="vertical" className="hidden md:block" />
    <Select>
-  <SelectTrigger  className="text-lg text-black outline-none md:border-none w-full shadow-none  ">
+  <SelectTrigger  className="text-lg text-black outline-none md:border-none w-full shadow-none   ">
     <SelectValue placeholder="pricing" />
   </SelectTrigger>
   <SelectContent>
    {Data.Pricing.map((id,index)=>(
 
-    <SelectItem value={id.amount}>{id.amount}</SelectItem>
+    <SelectItem value={id.amount}>$ {id.amount}</SelectItem>
    ))}
 
    

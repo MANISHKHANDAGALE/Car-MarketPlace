@@ -1,22 +1,21 @@
-import {faker} from '@faker-js/faker';
-function createRandomeCarList(){
+import { faker } from "@faker-js/faker";
+
+function createRandomCarList(){
     return {
-        name:faker.vehicle.vehicle(),
-        fuelType:faker.vehicle.fuel(),
+        name: faker.vehicle.vehicle(),
+        fuelType: faker.vehicle.fuel(),
         model:faker.vehicle.model(),
         type:faker.vehicle.type(),
-        
-        image:'https://www.usnews.com/object/image/0000018f-cfa8-d140-afdf-dfea657d0001/24-bmw-530i-ext1.jpg?update-time=1717175974506&size=responsiveGallery',
+        price:faker.finance.amount({min:2000,max:4000}),
         miles:1000,
         gearType:'Automatic',
-        price:faker.finance.amount({min:4000, max:20000})
+        image:'https://imgs.search.brave.com/UZeZn9kI5AJnzgH2owhax2wEZTxp4prsnC7vVDxx6is/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzAzLzA0Lzg5/LzM2MF9GXzEwMDMw/NDg5MTdfOW9Zc3FB/cmNYZDFFNk9FWlU1/dDVqS0dxcWNIT3pO/WE4uanBn',
+
     };
 }
-
-const carList=faker.helpers.multiple(createRandomeCarList,{
-    count:7
+const CarList = faker.helpers.multiple(createRandomCarList,{
+    count:7,
 })
-
 export default{
-    carList
+    CarList
 }
