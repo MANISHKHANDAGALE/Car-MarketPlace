@@ -6,6 +6,7 @@ function createRandomCarList(){
         fuelType: faker.vehicle.fuel(),
         model:faker.vehicle.model(),
         type:faker.vehicle.type(),
+        Condition: "New",
         price:faker.finance.amount({min:2000,max:4000}),
         miles:1000,
         gearType:'Automatic',

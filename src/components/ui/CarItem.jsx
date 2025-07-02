@@ -7,8 +7,9 @@ import { GrView } from "react-icons/gr";
 function CarItem({car}) {
   return (
    <>
-   <div className='mt-10 shadow cursor-pointer rounded-xl bg-white border flex flex-col items-center hover:shadow-blue-300'>
-    <img className='rounded-xl hover:scale-101 mt-2' width={300} height={250} src={car?.image} alt={car?.name} />
+   <div className='mt-10 mb-10 shadow cursor-pointer rounded-xl bg-white border flex flex-col items-center hover:shadow-blue-400'>
+    <h2 className='absolute left-10 mt-4 bg-green-500 rounded-full px-2 pb-0.5 text-sm text-white '>{car.Condition}</h2>
+    <img className='rounded-xl hover:scale-102 mt-2' width={300} height={250} src={car?.image} alt={car?.name} />
     <div>
     <h2 className='font-bold text-lg text-center p-4 hover:text-blue-600'>{car?.name}</h2>
     <Separator/>
@@ -18,7 +19,7 @@ function CarItem({car}) {
         <h2 className='text-lg text-black'>{car.miles} Miles</h2>
       </div>
      <div className='flex items-center flex-col gap-2 mb-2'>
-        <SiSpeedtest size={21}/>
+        <SiSpeedtest size={20}/>
         <h2 className='text-lg text-black'>{car.fuelType}</h2>
       </div>
       <div className='flex items-center flex-col gap-2 mb-2'>

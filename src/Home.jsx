@@ -5,6 +5,8 @@ import Header from './components/ui/Header';
 import Hero from './components/ui/Hero';
 import Category from './components/ui/Category';
 import MostSearchedCar from './components/ui/MostSearchedCar';
+import InfoSection from './components/ui/InfoSection';
+import Footer from './components/ui/Footer';
 function Home() {
   return (
     <>
@@ -12,7 +14,8 @@ function Home() {
     <Hero/>
     <Category/>
     <MostSearchedCar/>
-    
+    <InfoSection/>
+    <Footer/>
     </>
   )
 }

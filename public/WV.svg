@@ -1,0 +1,5 @@
+<!-- Save this as WheelVibe.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#0f172a" stroke="#00ffff" stroke-width="4"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="28" font-family="Arial" dy=".3em">WV</text>
+</svg>
