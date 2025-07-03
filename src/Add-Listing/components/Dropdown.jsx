@@ -6,16 +6,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-function Dropdown({item}) {
+function Dropdown({item,handleInputChange}) {
   return (
-    <Select>
+    <Select required={item.required} onValueChange={(value)=>handleInputChange(item.name,value)}>
   <SelectTrigger className="w-[180px]">
     <SelectValue placeholder={item?.label} />
   </SelectTrigger>
   <SelectContent>
-    {item?.options?.map((item,index)=>(
+    {item?.options?.map((option,index)=>(
 
-    <SelectItem value={index}>{item}</SelectItem>
+    <SelectItem value={option} key={index}>{option}</SelectItem>
     ))}
 
   </SelectContent>

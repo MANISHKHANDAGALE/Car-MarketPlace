@@ -1,9 +1,9 @@
 import React from 'react'
 import { Textarea } from '@/components/ui/textarea'
-function TextAreaField({item}) {
+function TextAreaField({item,handleInputChange}) {
   return (
     <>
-    <div><Textarea/></div>
+    <div onChange={(e)=>handleInputChange(item.name,e.target.value)}><Textarea/></div>
     </>
   )
 }
